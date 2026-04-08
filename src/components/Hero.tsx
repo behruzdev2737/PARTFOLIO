@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
+import {easeOut } from "framer-motion";
 
 const WORDS = ["Frontend Developer", "React Specialist", "Next.js Expert", "UI Enthusiast"];
 
@@ -35,7 +36,7 @@ function useTypewriter(words: string[]) {
 
 const up = (delay: number) => ({
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, delay, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, delay, ease: easeOut } },
 });
 
 export default function Hero() {
